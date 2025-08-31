@@ -43,7 +43,7 @@ Also supported: Google Console/`gcloud` SSH via **IAP egress** range `35.235.240
 * IAM permissions to create networking and compute resources
 
 ---
-
+## You can use the terraform file or you can implemnt this architecture using this steps
 ## 1) Network & Subnets
 
 ```bash
