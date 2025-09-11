@@ -1,0 +1,17 @@
+variable "region" {}
+variable "vpc_name" {}
+variable "vpc_name_private" {}
+variable "public_subnet_name" {}
+variable "private_subnet_name" {}
+variable "public_subnet_cidr" {}
+variable "private_subnet_cidr" {}
+variable "availability_zone_public" {}
+variable "availability_zone_private" {}
+variable "public_instance_type" {}
+variable "private_instance_type" {}
+variable "public_instance_ami" {}
+variable "private_instance_ami" {}
+variable "public_instance_name" {}
+variable "private_instance_name" {}
+variable "environment" {}
+variable "ssh_allowed_cidr" {}

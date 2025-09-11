@@ -1,24 +1,23 @@
 resource "google_compute_network" "vm1-network" {
-  name                    = "vm1-network"
+  name                    = var.vpc_name
   auto_create_subnetworks = false
-
 }
+
 resource "google_compute_subnetwork" "vm1-subnet" {
-  name          = "vm1-subnet"
-  region        = "us-central1"
+  name          = var.public_subnet_name
+  region        = var.region
   network       = google_compute_network.vm1-network.id
-  ip_cidr_range = "10.0.1.0/24"
+  ip_cidr_range = var.public_subnet_cidr
 }
 
 resource "google_compute_network" "vm2-network" {
-  name                    = "vm2-network"
+  name                    = var.vpc_name_private
   auto_create_subnetworks = false
-
 }
 
 resource "google_compute_subnetwork" "vm2-subnet" {
-  name          = "vm2-subnet"
-  region        = "us-central1"
+  name          = var.private_subnet_name
+  region        = var.region
   network       = google_compute_network.vm2-network.id
-  ip_cidr_range = "10.0.2.0/24"
+  ip_cidr_range = var.private_subnet_cidr
 }
